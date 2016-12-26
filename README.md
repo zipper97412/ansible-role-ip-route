@@ -1,4 +1,4 @@
-Ansible-Role-Ip-Route
+ansible-role-ip-route
 =========
 
 Configure ip routes with 'ip route' commands

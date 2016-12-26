@@ -1,7 +1,7 @@
 ---
 - name: Copy ip_routes script into place.
   template: src=ip_routes.j2 dest=/etc/ip_routes.sh owner=root group=root mode=0600
-  notify: reload firewall
+  notify: reload routes
 
 - name: Add ip_routes in network interfaces
   lineinfile: dest=/etc/network/interfaces regexp='post-up /bin/sh /etc/ip_routes.sh' insertafter='gateway .*$' line='post-up /bin/sh /etc/ip_routes.sh'

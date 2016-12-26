@@ -1,0 +1,7 @@
+{% if routes_default_gw is defined %}
+ip route replace default via {{ routes_default_gw }}
+{% endif %} 
+
+{% for route in routes_commands %}
+{{ route }}
+{% endfor %}

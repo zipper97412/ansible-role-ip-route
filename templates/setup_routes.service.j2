@@ -1,0 +1,8 @@
+[Unit]
+After=network.target
+
+[Service]
+ExecStart=/bin/sh /etc/ip_routes.sh
+
+[Install]
+WantedBy=default.target
